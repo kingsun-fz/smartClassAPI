@@ -21,7 +21,7 @@
             (function () {
                 var testEditor;
                 $(function() {
-                    $.get('markdown/default.md', function (res) {
+                    $.get('markdown/api.md', function (res) {
                         $('#markdown_text textarea').text(res);
                         testEditor = editormd("markdown_text", {
                             width   : "90%",
