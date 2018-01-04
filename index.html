@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple example - Editor.md examples</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/editormd.css" />
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1>Simple example</h1>
+            </header>
+            <div id="markdown_text">
+                <textarea style="display:none;"></textarea>
+            </div>
+        </div>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/editormd.js"></script>
+        <script type="text/javascript">
+            (function () {
+                var testEditor;
+                $(function() {
+                    $.get('markdown/default.md', function (res) {
+                        $('#markdown_text textarea').text(res);
+                        testEditor = editormd("markdown_text", {
+                            width   : "90%",
+                            height  : 640,
+                            syncScrolling : "single",
+                            path    : "./scripts/lib/"
+                        });
+                    })
+                });
+            })();
+        </script>
+    </body>
+</html>
