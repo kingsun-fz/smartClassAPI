@@ -94,6 +94,9 @@ body {
 }
 
 /*自定义文档*/
+#layout header {
+    overflow: hidden;
+}
 #layout header h1 {
     float: left;
 }
