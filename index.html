@@ -9,7 +9,8 @@
     <body>
         <div id="layout">
             <header>
-                <h1>Simple example</h1>
+                <h1>切换文档</h1>
+                <select id="switchMd"></select>
             </header>
             <div id="markdown_text">
                 <textarea style="display:none;"></textarea>
@@ -20,15 +21,36 @@
         <script type="text/javascript">
             (function () {
                 var testEditor;
+                function renderMarkdown(url) {
+                    $.get(url, function (res) {
+                        testEditor.cm.setValue(res);
+                    });
+                }
                 $(function() {
+                    $.get('markdown/list.json', function (res) {
+                        var tpl = '';
+                        console.log("1111", res);
+                        res.forEach(function (item) {
+                            tpl += '<option value="'+ item +'">' + item + '<\/option>';
+                        })
+                        $('#switchMd').html(tpl);
+                    });
                     $.get('markdown/api.md', function (res) {
                         $('#markdown_text textarea').text(res);
                         testEditor = editormd("markdown_text", {
                             width   : "90%",
                             height  : 640,
                             syncScrolling : "single",
-                            path    : "./scripts/lib/"
+                            path    : "./scripts/lib/",
+                            onload  : function () {
+                                $('.editormd-menu .fa-arrows-alt').trigger('click');
+                                $('.editormd-menu .fa-desktop').trigger('click');
+                            }
                         });
+                    });
+                    $('#switchMd').on('change', function (e) {
+                        var url = 'markdown/' + this.value;
+                        renderMarkdown(url);
                     })
                 });
             })();
