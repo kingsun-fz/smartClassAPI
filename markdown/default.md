@@ -1,19 +1,6 @@
-### 主要特性
-
-- 支持“标准”Markdown / CommonMark和Github风格的语法，也可变身为代码编辑器；
-- 支持实时预览、图片（跨域）上传、预格式文本/代码/表格插入、代码折叠、搜索替换、只读模式、自定义样式主题和多语言语法高亮等功能；
-- 支持ToC（Table of Contents）、Emoji表情、Task lists、@链接等Markdown扩展语法；
-- 支持TeX科学公式（基于KaTeX）、流程图 Flowchart 和 时序图 Sequence Diagram;
-- 支持识别和解析HTML标签，并且支持自定义过滤标签解析，具有可靠的安全性和几乎无限的扩展性；
-- 支持 AMD / CMD 模块化加载（支持 Require.js & Sea.js），并且支持自定义扩展插件；
-- 兼容主流的浏览器（IE8+）和Zepto.js，且支持iPad等平板设备；
-- 支持自定义主题样式；
+> 前言：本文档主要是说明Editor.md语法支持情况和写法
 
 # Editor.md
-
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 **目录 (Table of Contents)**
 
@@ -272,82 +259,8 @@ X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
 
 18&ordm;C  &quot;  &apos;
 
-### Emoji表情 :smiley:
-
-> Blockquotes :star:
-
-#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
-
-- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
-- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
-- [x] [ ] :smiley: this is a complete item :smiley:;
-- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao;
-- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
-    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
-    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
-
 #### 反斜杠 Escape
 
 \*literal asterisks\*
-
-### 科学公式 TeX(KaTeX)
-
-$$E=mc^2$$
-
-行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
-
-$$\(\sqrt{3x-1}+(1+x)^2\)$$
-
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
-
-多行公式：
-
-```math
-\displaystyle
-\left( \sum\_{k=1}^n a\_k b\_k \right)^2
-\leq
-\left( \sum\_{k=1}^n a\_k^2 \right)
-\left( \sum\_{k=1}^n b\_k^2 \right)
-```
-
-```katex
-\displaystyle
-    \frac{1}{
-        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
-        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
-        1+\frac{e^{-6\pi}}
-        {1+\frac{e^{-8\pi}}
-         {1+\cdots} }
-        }
-    }
-```
-
-```latex
-f(x) = \int_{-\infty}^\infty
-    \hat f(\xi)\,e^{2 \pi i \xi x}
-    \,d\xi
-```
-
-### 绘制流程图 Flowchart
-
-```flow
-st=>start: 用户登陆
-op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
-e=>end: 进入后台
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-### 绘制序列图 Sequence Diagram
-
-```seq
-Andrew->China: Says Hello
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
-```
 
 ### End

@@ -1,8 +1,11 @@
 ## 智慧教室接口说明
 
+[TOC]
+
 ### 1. 获取教材数据
 
-- Method API>  **GET [api/book/list](#)**
+- Method API
+>  **GET [api/book/list](#)**
 
 - 请求参数
 
@@ -27,7 +30,7 @@
 ```js
 {
   "success": true,
-  "code": 200,
+  "code": 0,
   "message": "操作正确",
   "data":[
     {
@@ -45,45 +48,14 @@
                 ]
             }
         ]
-    },
-    {
-        "ID":"2",
-        "Subject":"数学",
-        "EdiList":[
-            {
-                "ID":"3",
-                "Edition":"北京版",
-                "BookList":[
-                    {
-                        "ID":"247",
-                        "Book":"北京版小学数学一年级下册"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "ID":"3",
-        "Subject":"英语",
-        "EdiList":[
-            {
-                "ID":"1",
-                "Edition":"人教PEP版",
-                "BookList":[
-                    {
-                        "ID":"104",
-                        "Book":"人教PEP版小学英语三年级上册"
-                    }
-                ]
-            }
-        ]
     }
   ]
 }
 ```
 ### 2. 获取教材目录列表
 
-- Method API> GET **[api/book/cata/{id}](#)**
+- Method API
+> GET **[api/book/cata/{id}](#)**
 
 - 请求参数
 
@@ -117,32 +89,13 @@
                          "CodeName":"U1"
                      }
                  ]
-             },
-             {
-                 "ID":"3",
-                 "CodeName":"M2",
-                 "Child":[
-                     {
-                         "ID":"4",
-                         "CodeName":"U2"
-                     }
-                 ]
-             },
-             {
-                 "ID":"5",
-                 "CodeName":"M3",
-                 "Child":[
-                     {
-                         "ID":"6",
-                         "CodeName":"U3"
-                     }
-                 ]
              }
     ]
 }
 ```
 ### 3. 获取电子教材配置文件
-- Method API> GET **[api/book/deploy/{id}](#)**
+- Method API
+> GET **[api/book/deploy/{id}](#)**
 
 - 请求参数
 
@@ -173,7 +126,8 @@
 }
 ```
 ### 4. 获取用户备课数据
-- Method API> GET **[api/prelesson](#)**
+- Method API
+> GET **[api/prelesson](#)**
 
 - 请求参数
 
@@ -204,17 +158,14 @@
         {
             "page":"1",
             "conent":"xxxxxx"
-        },
-        {
-            "page":"2",
-            "conent":"xxxx"
         }
   ]
 }
 ```
 
 ### 5. 获取用户教学地图数据
-- Method API> GET **[api/map](#)**
+- Method API
+> GET **[api/map](#)**
 
 - 请求参数
 
@@ -248,7 +199,8 @@
 }
 ```
 ### 6. 保存备课数据
-- Method API> POST **[api/prelesson](#)**
+- Method API
+> POST **[api/prelesson](#)**
 
 - 请求参数
 
@@ -277,7 +229,8 @@
 }
 ```
 ### 7. 保存教学地图数据
-- Method API> POST **[api/map](#)**
+- Method API
+> POST **[api/map](#)**
 
 - 请求参数
 
@@ -306,7 +259,8 @@
 }
 ```
 ### 8. 获取资源列表
-- Method API> GET **[api/resource](#)**
+- Method API
+> GET **[api/resource](#)**
 
 - 请求参数
 
@@ -351,7 +305,8 @@
 }
 ```
 ### 9. 获取资源信息
-- Method API> GET **[api/resource/{id}](#)**
+- Method API
+> GET **[api/resource/{id}](#)**
 
 - 请求参数
 
