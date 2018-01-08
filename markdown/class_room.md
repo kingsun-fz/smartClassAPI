@@ -2,6 +2,23 @@
 
 [TOC]
 
+### 状态码统一说明
+- 0 成功
+
+- 1XX 用户类型错误
+    - 100 用户错误
+    - 101 用户选择错误
+
+- 2XX 网络类型错误
+    - 200 网络错误
+
+- 3XX 系统类型错误
+    - 300 系统错误
+
+- 4XX 其他类型错误
+    - 400 未知错误
+
+
 ### 1. 获取教材数据
 
 - Method API
@@ -9,18 +26,18 @@
 
 - 请求参数
 
-| 请求参数      |     参数类型 |   参数说明   |
-| ----------- | ------------|----------- |
-| BookType    | Int,可为空   |  教材类型    |
-| Subject     | Int,可为空   |  科目ID     |
-| Edition     | Int,可为空   |  版本ID     |
-| UserID      | string,可为空|  用户ID     |
+| 请求参数      |     参数类型    |   参数说明   |
+| ----------- | ---------------|----------- |
+| BookType    | String,可为空   |  教材类型    |
+| Subject     | String,可为空   |  科目ID     |
+| Edition     | String,可为空   |  版本ID     |
+| UserID      | String,可为空   |  用户ID     |
 
 - 返回参数
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
+| success     |   Boolean   |  请求成功与否  |
 | code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
@@ -31,7 +48,7 @@
 {
   "success": true,
   "code": 0,
-  "message": "操作正确",
+  "message": "",
   "data":[
     {
         "ID":"1",
@@ -56,20 +73,20 @@
 ### 2. 获取教材目录列表
 
 - Method API
-> GET **[api/book/cata/{id}](#)**
+> GET **[api/book/catalog/{bookID}](#)**
 
 - 请求参数
 
 | 请求参数      |     参数类型    |   参数说明  |
-| ----------- |  ------------ |----------- |
-| bookID      | Integer,不可为空 |  教材ID    |
+| ----------- |  ------------- |----------- |
+| {bookID}    | String,不可为空  |  教材ID    |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -78,8 +95,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":[
              {
                  "ID":"1",
@@ -96,20 +113,20 @@
 ```
 ### 3. 获取电子教材配置文件
 - Method API
-> GET **[api/book/deploy/{id}](#)**
+> GET **[api/book/deploy/{bookID}](#)**
 
 - 请求参数
 
 | 请求参数      |     参数类型    |   参数说明  |
-| ----------- |  ------------ |----------- |
-| bookID      | Integer,不可为空 |  教材ID    |
+| ----------- |  ------------- |----------- |
+| {bookID}    | String,不可为空 |  教材ID    |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -118,8 +135,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":{
         "id":"",
         "url":"http://xxx/TextBookHandler.ashx?OP=getDBjs&BookID=xxx"
@@ -135,16 +152,16 @@
 | 请求参数      |     参数类型    |   参数说明   |
 | ----------- | ------------   |----------- |
 | UserID      | string,不可为空  |  用户ID    |
-| UserType    | Integer,不可为空 |  用户类型   |
-| BookID      | Integer,不可为空 |  教材ID    |
+| UserType    | String,不可为空  |  用户类型   |
+| BookID      | String,不可为空  |  教材ID    |
 | Pages       | Json,不可为空    |  页码数组   |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -153,8 +170,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":[
         {
             "page":"1",
@@ -173,16 +190,16 @@
 | 请求参数      |     参数类型    |   参数说明   |
 | ----------- | ------------   |----------- |
 | UserID      | string,不可为空  |  用户ID     |
-| UserType    | Integer,不可为空 |  用户类型    |
-| BookID      | Integer,不可为空 |  教材ID     |
-| Cata        | Integer,不可为空 |  目录ID     |
+| UserType    | String,不可为空  |  用户类型    |
+| BookID      | String,不可为空  |  教材ID     |
+| Cata        | String,不可为空  |  目录ID     |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -191,8 +208,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":{
       "cata":"1",
       "conent":"xxxxxx"
@@ -208,25 +225,26 @@
 | 请求参数      |     参数类型     |   参数说明                     |
 | ----------- | ------------    |-----------                    |
 | UserID      | string,不可为空  |  用户ID                        |
-| UserType    | Integer,不可为空 |  用户类型                       |
-| BookID      | Integer,不可为空 |  教材ID                        |
+| UserType    | String,不可为空  |  用户类型                       |
+| BookID      | String,不可为空  |  教材ID                        |
 | Content     | String,不可为空  |  Page和备课数据的二维数组Json     |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
+| data        |   Json      |  返回数据     |
 
 - 返回示例
 
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确"
+  "code": 0,
+  "message": ""
 }
 ```
 ### 7. 保存教学地图数据
@@ -235,28 +253,29 @@
 
 - 请求参数
 
-| 请求参数      |     参数类型 |   参数说明   |
-| ----------- | ------------|-----------  |
-| UserID      | string,不可为空  |  用户ID                        |
-| UserType    | Integer,不可为空 |  用户类型                       |
-| BookID      | Integer,不可为空 |  教材ID                        |
-| Content     | String,不可为空  |  Cata和教学地图数据的二维数组Json  |
+| 请求参数      |     参数类型   |   参数说明                       |
+| ----------- | --------------|------------------------------  |
+| UserID      | String,不可为空 |  用户ID                        |
+| UserType    | String,不可为空 |  用户类型                       |
+| BookID      | String,不可为空 |  教材ID                        |
+| Content     | String,不可为空 |  Cata和教学地图数据的二维数组Json  |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
+| data        |   Json      |  返回数据     |
 
 - 返回示例
 
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确"
+  "code": 0,
+  "message": ""
 }
 ```
 ### 8. 获取资源列表
@@ -267,19 +286,19 @@
 
 | 请求参数        |     参数类型 |   参数说明    |
 | -----------   | ------------|-----------  |
-| CataParentID  | Integer        |  一级目录ID,配合CataChildID使用时,不能为空  |
-| CataChildID   | Integer        |  子级目录ID,配合CataParentID使用          |
-| SubjectID     | Integer        |  科目ID,配合KeyWord使用时不能为空          |
+| CataParentID  | String         |一级目录ID,配合CataChildID使用时,不能为空  |
+| CataChildID   | String         |  子级目录ID,配合CataParentID使用          |
+| SubjectID     | String         |  科目ID,配合KeyWord使用时不能为空          |
 | KeyWord       | String         |  关键字,配合SubjectID使用时不能为空         |
-| PageIndex     | Integer,不可为空 |  当前页                                 |
-| PageSize      | Integer,不可为空 |  当前页显示数量                          |
+| PageIndex     | String,不可为空 |  当前页                                 |
+| PageSize      | String,不可为空 |  当前页显示数量                          |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -288,8 +307,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":{
       "TypeList":[
              {"ID":1,"CodeName":"类型1"},
@@ -307,20 +326,20 @@
 ```
 ### 9. 获取资源信息
 - Method API
-> GET **[api/resource/{id}](#)**
+> GET **[api/resource/{rId}](#)**
 
 - 请求参数
 
-| 请求参数      |     参数类型 |   参数说明   |
-| ----------- | ------------|-----------  |
-| rid         | Long,不可为空 |  资源UID   |
+| 请求参数      |     参数类型    |   参数说明  |
+| ----------- | ---------------|-----------|
+| {rId}       | String,不可为空 |  资源UID   |
 
 - 返回参数
 
-| 返回参数      |     参数类型 |   参数说明   |
+| 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   boolean   |  请求成功与否  |
-| code        |   Integer   |  执行结果code |
+| success     |   Boolean   |  请求成功与否  |
+| code        |   Int       |  执行结果code |
 | message     |   String    |  执行结果消息  |
 | data        |   Json      |  返回数据     |
 
@@ -329,8 +348,8 @@
 ```js
 {
   "success": true,
-  "code": 200,
-  "message": "操作正确",
+  "code": 0,
+  "message": "",
   "data":{
     "ID":"xxxxxxxx",
     "Title":"xxxx",
