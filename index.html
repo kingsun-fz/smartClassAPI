@@ -21,6 +21,7 @@
         <script type="text/javascript">
             (function () {
                 var testEditor;
+                var defaultMd = 'api.md'; //默认打开的markdown文档
                 function renderMarkdown(url) {
                     $.get(url, function (res) {
                         testEditor.cm.setValue(res);
@@ -29,13 +30,16 @@
                 $(function() {
                     $.get('markdown/list.json', function (res) {
                         var tpl = '';
-                        console.log("1111", res);
                         res.forEach(function (item) {
-                            tpl += '<option value="'+ item +'">' + item + '<\/option>';
+                            var attr = '';
+                            if(item === defaultMd) {
+                                attr = 'selected="selected"'
+                            }
+                            tpl += '<option value="'+ item +'" ' + attr + '>' + item + '<\/option>';
                         })
                         $('#switchMd').html(tpl);
                     });
-                    $.get('markdown/api.md', function (res) {
+                    $.get('markdown/' + defaultMd, function (res) {
                         $('#markdown_text textarea').text(res);
                         testEditor = editormd("markdown_text", {
                             width   : "90%",
