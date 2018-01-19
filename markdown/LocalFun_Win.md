@@ -12,7 +12,7 @@
 ### 1. 获取页面水滴json
 
 - Method： callHostFunction
->**getAllWare_n**
+>**selBookPageData_n**
 
 - 请求参数
 
@@ -73,7 +73,7 @@
 ### 3. 获取电子书dbjs
 
 - Method： callHostFunction
->**getDbJs_n**
+>**getTextbookById_n**
 
 - 请求参数
 
@@ -104,7 +104,7 @@
 ### 4. 获取电子书目录
 
 - Method： callHostFunction
->**getCatalog_n**
+>**getCatalogByBookId_n**
 
 - 请求参数
 
@@ -135,7 +135,7 @@
 ### 5. 获取教学地图
 
 - Method： callHostFunction
->**getTeachMap_n**
+>**getCurTeachMap_n**
 
 - 请求参数
 
