@@ -21,7 +21,19 @@
         <script type="text/javascript">
             (function () {
                 var testEditor;
+                var db = {
+                    set: function (key, val) {
+                        localStorage.setItem(key, val);
+                    },
+                    get: function (key) {
+                        return localStorage.getItem(key);
+                    }
+                };
                 var defaultMd = 'class_room.md'; //默认打开的markdown文档
+                if(!!db.get('defaultMd')) {
+                    defaultMd = db.get('defaultMd');
+                    console.log(defaultMd)
+                }
                 function renderMarkdown(url) {
                     $.get(url, function (res) {
                         testEditor.cm.setValue(res);
@@ -39,6 +51,7 @@
                         })
                         $('#switchMd').html(tpl);
                     });
+
                     $.get('markdown/' + defaultMd, function (res) {
                         $('#markdown_text textarea').text(res);
                         testEditor = editormd("markdown_text", {
@@ -52,8 +65,10 @@
                             }
                         });
                     });
+
                     $('#switchMd').on('change', function (e) {
                         var url = 'markdown/' + this.value;
+                        db.set('defaultMd', this.value);
                         renderMarkdown(url);
                     })
                 });
