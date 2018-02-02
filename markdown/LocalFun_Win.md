@@ -18,7 +18,10 @@
 
 | 请求参数     |     参数类型    |   参数说明   |
 | ----------- | --------------- |----------- |
-| s           | String,不可为空 |  方法ID和参数|
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | string,不可为空  |  教材ID    |
+| Pages       | string,不可为空    |  页码数组 （6,7）  |
 
 - 返回参数
 
@@ -30,13 +33,14 @@
 | data        |   Json      |  返回数据     |
 
 - 返回示例
+离线、在线
 
 ```js
 {
   "success": true,
   "code": 0,
   "message": "",
-  "data":{
+  "data":[{
              "pageNum": 6,
              "imgSrc": "images/06.jpg",
              "btns": [
@@ -52,7 +56,23 @@
                      "comeFrom": "ModResource"
                  }
              ]
-         }
+         },{
+             "pageNum": 7,
+             "imgSrc": "images/07.jpg",
+             "btns": [
+                 {
+                     "id": "p_76",
+                     "icoType": "6",
+                     "randId": "1505813969790",
+                     "isread": true,
+                     "sourceUrl": "c6837bb1-ea95-4546-94b6-cb72bdd6f694",
+                     "X": 540.6465126811594,
+                     "Y": 341.0474788647343,
+                     "title": "雅鲁藏布大峡谷-动画",
+                     "comeFrom": "ModResource"
+                 }
+             ]
+         }]
 }
 ```
 ### 2. 获取互动课件配置首页html
@@ -64,7 +84,12 @@
 
 | 请求参数     |     参数类型    |   参数说明   |
 | ----------- | --------------- |----------- |
-| s           | String,不可为空 |  方法ID和参数|
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
+| PageID      | int,不可为空  |  页码    |
+| FileID      | string,不可为空  |  文件ID    |
+
 
 - 返回参数
 
@@ -76,6 +101,7 @@
 | data        |   Json      |  返回数据     |
 
 - 返回示例
+离线
 
 ```js
 {
@@ -86,16 +112,28 @@
 }
 
 ```
+在线
+```js
+{
+	"code": 0,
+	"data": "http:\/\/183.47.42.218:8888\/2017\/09\/09\/45d99f96-1320-484a-b49f-c62702f6cd3f\/ren_hui\/ren_hui.html",
+	"message": "",
+	"success": true
+}
+```
+
 ### 3. 获取电子书dbjs
 
 - Method： callHostFunction
->**getTextbookById_n**
+>**getDbJsById_n**
 
 - 请求参数
 
 | 请求参数     |     参数类型    |   参数说明   |
 | ----------- | --------------- |----------- |
-| s           | String,不可为空 |  方法ID和参数|
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
 
 - 返回参数
 
@@ -107,7 +145,7 @@
 | data        |   Json      |  返回数据     |
 
 - 返回示例
-
+离线
 ```js
 {
   "success": true,
@@ -152,8 +190,18 @@
              ]
          }
 }
-
 ```
+在线
+
+```js
+{
+	"code": 0,
+	"data": "var DBJsonPath='Course\/TextBook\/RJYW4A';var dbJson='{\"book\":\"人教版小学语文四年级上册\",\"pageSource\":[{\"pageId\":-5,\"pageImg\":\"fm001\/bg.jpg\"},{\"pageId\":1,\"pageImg\":\"page001\/bg.jpg\"},{\"pageId\":2,\"pageImg\":\"page002\/bg.jpg\",\"buttons\":{\"button\":[{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":44,\"id\":1,\"soundsrc\":\"page002\/sound\/p002001.mp3\",\"width\":116,\"x\":338.667,\"y\":81.3333},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":36,\"id\":2,\"soundsrc\":\"page002\/sound\/p002002.mp3\",\"width\":488,\"x\":122.667,\"y\":190.667},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":366.667,\"id\":3,\"soundsrc\":\"page002\/sound\/p002003.mp3\",\"width\":620,\"x\":57.3333,\"y\":230.667}]}},{\"pageId\":186,\"pageImg\":\"zfd001\/bg.jpg\"}]}';",
+	"message": "",
+	"success": true
+}
+```
+
 ### 4. 获取电子书目录
 
 - Method： callHostFunction
