@@ -105,10 +105,40 @@
 
 ```js
 {
-  "success": true,
-  "code": 0,
-  "message": "",
-  "data":"F:\GitWork\offline_win\SmarterClassroomWindows\bin\x86\Debug\Page\data\RJYW4A\resource\第一单元\950baed5-b7de-48dc-b00b-1a14713f6628\ren_mang\ren_mang.html"
+	"code": 0,
+	"data": "{\"json\":\"{\
+\
+  \\\"desc\\\":{\
+\
+  \	\\\"vision\\\":\\\"当前资源的版本号\\\",\
+\
+  \	\\\"title\\\":\\\"当前资源的名称\\\",\
+\
+  \	\\\"moveRadio\\\":\\\"视频动画宽高比，请根据动画的宽高比值设置\\\",\
+\
+  \	\\\"movMinWidth\\\":\\\"动画的帧宽度，也就是可缩放的最小宽度值\\\",\
+\
+  \	\\\"movMinHeight\\\":\\\"动画的帧高度，也就是可缩放的最小高度值\\\",\
+\
+  \	\\\"type\\\":\\\"1角色扮演；2流式播放；3卡拉OK；4操练动画（数学）\\\"\
+\
+  },\
+\
+  \\\"vision\\\":\\\"1.0\\\",\
+\
+  \\\"title\\\":\\\"Learn the sounds\\\",\
+\
+  \\\"movMinWidth\\\":1280,\
+\
+  \\\"movMinHeight\\\":720,\
+\
+  \\\"moveRadio\\\":\\\"16:9\\\",\
+\
+  \\\"type\\\":\\\"5\\\"\	\
+\
+}\",\"url\":\"F:\\\\GitWork\\\\offline_win\\\\SmarterClassroomWindows\\\\bin\\\\x86\\\\Debug\\\\Page\\\\data\\\\49a92e48-1f39-4382-9273-0a0d521162c6\\\\332\\\\resource\\\\page002\\\\950baed5-b7de-48dc-b00b-1a14713f6628\\\\ren_mang\\\\ren_mang.html\"}",
+	"message": "",
+	"success": true
 }
 
 ```
