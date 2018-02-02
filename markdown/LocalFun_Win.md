@@ -211,7 +211,9 @@
 
 | 请求参数     |     参数类型    |   参数说明   |
 | ----------- | --------------- |----------- |
-| s           | String,不可为空 |  方法ID和参数|
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
 
 - 返回参数
 
@@ -279,6 +281,16 @@
 }
 
 ```
+在线
+```js
+{
+	"code": 0,
+	"data": "[{\"id\":294266,\"title\":\"第一单元\",\"children\":[{\"id\":304419,\"title\":\"第一组\",\"isFolder\":false,\"sord\":0,\"StartPage\":1,\"EndPage\":1},{\"id\":294267,\"title\":\"1 观潮\",\"isFolder\":false,\"sord\":1,\"StartPage\":2,\"EndPage\":5},{\"id\":294268,\"title\":\"2* 雅鲁藏布大峡谷\",\"isFolder\":false,\"sord\":3,\"StartPage\":6,\"EndPage\":9},{\"id\":304446,\"title\":\"8 人造反光植物\",\"isFolder\":false,\"sord\":8,\"StartPage\":178,\"EndPage\":179}],\"isFolder\":true,\"sord\":51,\"StartPage\":160,\"EndPage\":179},{\"id\":304447,\"title\":\"生字表（一）\",\"isFolder\":false,\"sord\":51,\"StartPage\":180,\"EndPage\":182},{\"id\":304448,\"title\":\"生字表（二）\",\"isFolder\":false,\"sord\":51,\"StartPage\":183,\"EndPage\":185}]",
+	"message": "",
+	"success": true
+}
+```
+
 ### 5. 获取教学地图
 
 - Method： callHostFunction
@@ -288,7 +300,10 @@
 
 | 请求参数     |     参数类型    |   参数说明   |
 | ----------- | --------------- |----------- |
-| s           | String,不可为空 |  方法ID和参数|
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
+| UnitID      | int,不可为空  |  单元ID    |
 
 - 返回参数
 
@@ -300,6 +315,7 @@
 | data        |   Json      |  返回数据     |
 
 - 返回示例
+离线、在线
 
 ```js
 {
