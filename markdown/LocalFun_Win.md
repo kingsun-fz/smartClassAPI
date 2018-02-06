@@ -27,20 +27,20 @@
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   Boolean   |  请求成功与否  |
-| code        |   Int       |  执行结果code |
-| message     |   String    |  执行结果消息  |
-| data        |   Json      |  返回数据     |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
 
 - 返回示例
 离线、在线
 
 ```js
 {
-  "success": true,
-  "code": 0,
-  "message": "",
-  "data":[{
+  "Success": true,
+  "Code": 0,
+  "Message": "",
+  "Data":[{
              "pageNum": 6,
              "imgSrc": "images/06.jpg",
              "btns": [
@@ -95,18 +95,18 @@
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   Boolean   |  请求成功与否  |
-| code        |   Int       |  执行结果code |
-| message     |   String    |  执行结果消息  |
-| data        |   Json      |  返回数据     |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
 
 - 返回示例
 离线
 
 ```js
 {
-	"code": 0,
-	"data": "{\"json\":\"{\
+	"Code": 0,
+	"Data": "{\"json\":\"{\
 \
   \\\"desc\\\":{\
 \
@@ -137,18 +137,18 @@
   \\\"type\\\":\\\"5\\\"\	\
 \
 }\",\"url\":\"F:\\\\GitWork\\\\offline_win\\\\SmarterClassroomWindows\\\\bin\\\\x86\\\\Debug\\\\Page\\\\data\\\\49a92e48-1f39-4382-9273-0a0d521162c6\\\\332\\\\resource\\\\page002\\\\950baed5-b7de-48dc-b00b-1a14713f6628\\\\ren_mang\\\\ren_mang.html\"}",
-	"message": "",
-	"success": true
+	"Message": "",
+	"Success": true
 }
 
 ```
 在线
 ```js
 {
-	"code": 0,
-	"data": "http:\/\/183.47.42.218:8888\/2017\/09\/09\/45d99f96-1320-484a-b49f-c62702f6cd3f\/ren_hui\/ren_hui.html",
-	"message": "",
-	"success": true
+	"Code": 0,
+	"Data": "http:\/\/183.47.42.218:8888\/2017\/09\/09\/45d99f96-1320-484a-b49f-c62702f6cd3f\/ren_hui\/ren_hui.html",
+	"Message": "",
+	"Success": true
 }
 ```
 
@@ -169,19 +169,19 @@
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   Boolean   |  请求成功与否  |
-| code        |   Int       |  执行结果code |
-| message     |   String    |  执行结果消息  |
-| data        |   Json      |  返回数据     |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
 
 - 返回示例
 离线
 ```js
 {
-  "success": true,
-  "code": 0,
-  "message": "",
-  "data":{
+  "Success": true,
+  "Code": 0,
+  "Message": "",
+  "Data":{
              "book": "人教版小学语文四年级上册",
              "pageSource": [
 
@@ -225,10 +225,10 @@
 
 ```js
 {
-	"code": 0,
-	"data": "var DBJsonPath='Course\/TextBook\/RJYW4A';var dbJson='{\"book\":\"人教版小学语文四年级上册\",\"pageSource\":[{\"pageId\":-5,\"pageImg\":\"fm001\/bg.jpg\"},{\"pageId\":1,\"pageImg\":\"page001\/bg.jpg\"},{\"pageId\":2,\"pageImg\":\"page002\/bg.jpg\",\"buttons\":{\"button\":[{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":44,\"id\":1,\"soundsrc\":\"page002\/sound\/p002001.mp3\",\"width\":116,\"x\":338.667,\"y\":81.3333},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":36,\"id\":2,\"soundsrc\":\"page002\/sound\/p002002.mp3\",\"width\":488,\"x\":122.667,\"y\":190.667},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":366.667,\"id\":3,\"soundsrc\":\"page002\/sound\/p002003.mp3\",\"width\":620,\"x\":57.3333,\"y\":230.667}]}},{\"pageId\":186,\"pageImg\":\"zfd001\/bg.jpg\"}]}';",
-	"message": "",
-	"success": true
+	"Code": 0,
+	"Data": "var DBJsonPath='Course\/TextBook\/RJYW4A';var dbJson='{\"book\":\"人教版小学语文四年级上册\",\"pageSource\":[{\"pageId\":-5,\"pageImg\":\"fm001\/bg.jpg\"},{\"pageId\":1,\"pageImg\":\"page001\/bg.jpg\"},{\"pageId\":2,\"pageImg\":\"page002\/bg.jpg\",\"buttons\":{\"button\":[{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":44,\"id\":1,\"soundsrc\":\"page002\/sound\/p002001.mp3\",\"width\":116,\"x\":338.667,\"y\":81.3333},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":36,\"id\":2,\"soundsrc\":\"page002\/sound\/p002002.mp3\",\"width\":488,\"x\":122.667,\"y\":190.667},{\"eventtype\":5,\"subjectNum\":1,\"itemNum\":0,\"height\":366.667,\"id\":3,\"soundsrc\":\"page002\/sound\/p002003.mp3\",\"width\":620,\"x\":57.3333,\"y\":230.667}]}},{\"pageId\":186,\"pageImg\":\"zfd001\/bg.jpg\"}]}';",
+	"Message": "",
+	"Success": true
 }
 ```
 
@@ -249,19 +249,19 @@
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   Boolean   |  请求成功与否  |
-| code        |   Int       |  执行结果code |
-| message     |   String    |  执行结果消息  |
-| data        |   Json      |  返回数据     |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
 
 - 返回示例
 
 ```js
 {
-  "success": true,
-  "code": 0,
-  "message": "",
-  "data":[
+  "Success": true,
+  "Code": 0,
+  "Message": "",
+  "Data":[
          {
          "id": 294266,
          "title": "第一单元",
@@ -314,10 +314,10 @@
 在线
 ```js
 {
-	"code": 0,
-	"data": "[{\"id\":294266,\"title\":\"第一单元\",\"children\":[{\"id\":304419,\"title\":\"第一组\",\"isFolder\":false,\"sord\":0,\"StartPage\":1,\"EndPage\":1},{\"id\":294267,\"title\":\"1 观潮\",\"isFolder\":false,\"sord\":1,\"StartPage\":2,\"EndPage\":5},{\"id\":294268,\"title\":\"2* 雅鲁藏布大峡谷\",\"isFolder\":false,\"sord\":3,\"StartPage\":6,\"EndPage\":9},{\"id\":304446,\"title\":\"8 人造反光植物\",\"isFolder\":false,\"sord\":8,\"StartPage\":178,\"EndPage\":179}],\"isFolder\":true,\"sord\":51,\"StartPage\":160,\"EndPage\":179},{\"id\":304447,\"title\":\"生字表（一）\",\"isFolder\":false,\"sord\":51,\"StartPage\":180,\"EndPage\":182},{\"id\":304448,\"title\":\"生字表（二）\",\"isFolder\":false,\"sord\":51,\"StartPage\":183,\"EndPage\":185}]",
-	"message": "",
-	"success": true
+	"Code": 0,
+	"Data": "[{\"id\":294266,\"title\":\"第一单元\",\"children\":[{\"id\":304419,\"title\":\"第一组\",\"isFolder\":false,\"sord\":0,\"StartPage\":1,\"EndPage\":1},{\"id\":294267,\"title\":\"1 观潮\",\"isFolder\":false,\"sord\":1,\"StartPage\":2,\"EndPage\":5},{\"id\":294268,\"title\":\"2* 雅鲁藏布大峡谷\",\"isFolder\":false,\"sord\":3,\"StartPage\":6,\"EndPage\":9},{\"id\":304446,\"title\":\"8 人造反光植物\",\"isFolder\":false,\"sord\":8,\"StartPage\":178,\"EndPage\":179}],\"isFolder\":true,\"sord\":51,\"StartPage\":160,\"EndPage\":179},{\"id\":304447,\"title\":\"生字表（一）\",\"isFolder\":false,\"sord\":51,\"StartPage\":180,\"EndPage\":182},{\"id\":304448,\"title\":\"生字表（二）\",\"isFolder\":false,\"sord\":51,\"StartPage\":183,\"EndPage\":185}]",
+	"Message": "",
+	"Success": true
 }
 ```
 
@@ -339,20 +339,20 @@
 
 | 返回参数      |     参数类型 |   参数说明    |
 | ----------- | ------------| ----------- |
-| success     |   Boolean   |  请求成功与否  |
-| code        |   Int       |  执行结果code |
-| message     |   String    |  执行结果消息  |
-| data        |   Json      |  返回数据     |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
 
 - 返回示例
 离线、在线
 
 ```js
 {
-  "success": true,
-  "code": 0,
-  "message": "",
-  "data":[
+  "Success": true,
+  "Code": 0,
+  "Message": "",
+  "Data":[
              {
                  "stepName": "第一步：课堂导入",
                  "liList": [
