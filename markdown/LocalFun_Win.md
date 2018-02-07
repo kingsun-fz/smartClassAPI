@@ -136,7 +136,7 @@
 \
   \\\"type\\\":\\\"5\\\"\	\
 \
-}\",\"url\":\"F:\\\\GitWork\\\\offline_win\\\\SmarterClassroomWindows\\\\bin\\\\x86\\\\Debug\\\\Page\\\\data\\\\49a92e48-1f39-4382-9273-0a0d521162c6\\\\332\\\\resource\\\\page002\\\\950baed5-b7de-48dc-b00b-1a14713f6628\\\\ren_mang\\\\ren_mang.html\"}",
+}\",\"url\":\"data\\\\49a92e48-1f39-4382-9273-0a0d521162c6\\\\332\\\\resource\\\\page002\\\\950baed5-b7de-48dc-b00b-1a14713f6628\\\\ren_mang\\\\ren_mang.html\"}",
 	"Message": "",
 	"Success": true
 }
