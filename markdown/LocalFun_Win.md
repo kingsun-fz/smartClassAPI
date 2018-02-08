@@ -399,7 +399,6 @@
 | Success     |   Boolean   |  请求成功与否  |
 | Code        |   Int       |  执行结果code |
 | Message     |   String    |  执行结果消息  |
-| Data        |   Json      |  返回数据     |
 
 - 返回示例
 离线、在线
