@@ -415,7 +415,7 @@
 ### 7. 获取授课页码
 
 - Method： callHostFunction
->**getTeachPage**
+>**getTeachPage_n**
 
 - 请求参数
 
@@ -459,6 +459,40 @@
 		"Stage": null,
 		"UnitName": "1 秋天的图画"
 	}]
+}
+
+```
+### 8. 保存或更新授课页码
+
+- Method： callHostFunction
+>**getTeachPage_n**
+
+- 请求参数
+
+| 请求参数     |     参数类型    |   参数说明   |
+| ----------- | --------------- |----------- |
+| Func      | string,不可为空  |  方法名    |
+| pagedata      | string,不可为空  |  页面数据    |
+- 返回参数
+
+| 返回参数      |     参数类型 |   参数说明    |
+| ----------- | ------------| ----------- |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
+
+- 返回示例
+离线、在线
+
+```js
+{
+	{
+    "Success": true,
+    "Code": 0,
+    "Message": "",
+    "Data": false
+    }
 }
 
 ```
