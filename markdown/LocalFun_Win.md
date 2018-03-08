@@ -412,3 +412,53 @@
   "Data": ""
 }
 ```
+### 7. 获取授课页码
+
+- Method： callHostFunction
+>**getTeachPage**
+
+- 请求参数
+
+| 请求参数     |     参数类型    |   参数说明   |
+| ----------- | --------------- |----------- |
+| Func      | string,不可为空  |  方法名    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
+| ClassID      | int,不可为空  |  班级ID    |
+| AspxName      | string,不可为空  |  当前页面    |
+- 返回参数
+
+| 返回参数      |     参数类型 |   参数说明    |
+| ----------- | ------------| ----------- |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
+
+- 返回示例
+离线、在线
+
+```js
+{
+	"Success": true,
+	"Code": 0,
+	"Message": "",
+	"Data": [{
+		"PageInitID": "A61C09F1-E387-71B1-2E13-0D01E93E5D27",
+		"UserID": "49a92e48-1f39-4382-9273-0a0d521162c6",
+		"GradeID": 3,
+		"ClassID": -1,
+		"BookID": 307,
+		"SubjectID": 1,
+		"UnitID": 290075,
+		"PageNum": 6,
+		"CreateTime": "2018-03-08T11:24:06",
+		"AspxName": "Teaching",
+		"EditionID": 27,
+		"BookType": null,
+		"Stage": null,
+		"UnitName": "1 秋天的图画"
+	}]
+}
+
+```
