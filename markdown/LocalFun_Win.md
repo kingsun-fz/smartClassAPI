@@ -465,7 +465,7 @@
 ### 8. 保存或更新授课页码
 
 - Method： callHostFunction
->**postTeachPage_n**
+>**getTeachPage_n**
 
 - 请求参数
 
@@ -494,5 +494,38 @@
     "Data": false
     }
 }
+
+```
+### 9. 用户操作记录
+
+- Method： callHostFunction 
+- post
+>**userOperLog_n**
+
+- 请求参数
+
+| 请求参数     |     参数类型    |   参数说明   |
+| ----------- | --------------- |----------- |
+| Operator      | class,不可为空  |  操作数据    |
+| Func      | string,可为空  |  方法名    |
+
+- Operator
+
+| Operator     |     字段    |   参数说明   |
+| ----------- | --------------- |----------- |
+| userId      | string,不可为空  |  用户id    |
+| userType      | int,不可为空  |  用户类型    |
+| OperId      | int,不可为空  |  操作编码    |
+| content      | string,不可为空  |  操作内容    |
+
+- 返回参数
+
+| 返回参数      |     参数类型 |   参数说明    |
+| ----------- | ------------| ----------- |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   Json      |  返回数据     |
+
 
 ```
