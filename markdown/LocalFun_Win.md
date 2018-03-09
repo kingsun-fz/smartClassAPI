@@ -465,7 +465,7 @@
 ### 8. 保存或更新授课页码
 
 - Method： callHostFunction
->**getTeachPage_n**
+>**postTeachPage_n**
 
 - 请求参数
 
