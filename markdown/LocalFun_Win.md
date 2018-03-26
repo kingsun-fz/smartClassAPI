@@ -443,7 +443,7 @@
 	"Success": true,
 	"Code": 0,
 	"Message": "",
-	"Data": [{
+	"Data": {
 		"PageInitID": "A61C09F1-E387-71B1-2E13-0D01E93E5D27",
 		"UserID": "49a92e48-1f39-4382-9273-0a0d521162c6",
 		"GradeID": 3,
@@ -458,7 +458,7 @@
 		"BookType": null,
 		"Stage": null,
 		"UnitName": "1 秋天的图画"
-	}]
+	}
 }
 
 ```
@@ -473,6 +473,10 @@
 | ----------- | --------------- |----------- |
 | Func      | string,不可为空  |  方法名    |
 | pagedata      | string,不可为空  |  页面数据    |
+| UserID      | string,不可为空  |  用户ID    |
+| BookID      | int,不可为空  |  教材ID    |
+| ClassID      | int,不可为空  |  班级ID    |
+| AspxName      | string,不可为空  |  当前页面    |
 - 返回参数
 
 | 返回参数      |     参数类型 |   参数说明    |
