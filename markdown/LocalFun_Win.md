@@ -495,7 +495,7 @@
     "Success": true,
     "Code": 0,
     "Message": "",
-    "Data": false
+    "Data": null
     }
 }
 
