@@ -503,7 +503,7 @@
 ### 9. 用户操作记录
 
 - Method： callHostFunction 
-- post
+- get
 >**userOperLog_n**
 
 - 请求参数
