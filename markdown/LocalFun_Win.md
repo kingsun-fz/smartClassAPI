@@ -519,7 +519,7 @@
 | ----------- | --------------- |----------- |
 | userId      | string,不可为空  |  用户id    |
 | userType      | int,不可为空  |  用户类型    |
-| OperId      | int,不可为空  |  操作编码    |
+| operId      | int,不可为空  |  操作编码    |
 | content      | string,不可为空  |  操作内容    |
 
 - 返回参数
