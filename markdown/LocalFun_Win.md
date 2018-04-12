@@ -531,5 +531,77 @@
 | Message     |   String    |  执行结果消息  |
 | Data        |   Json      |  返回数据     |
 
+``
 
+### 10. 获取用户最新备课时间
+
+- Method： api 
+- get
+>**getPreTime**
+
+- 请求参数
+
+| 请求参数     |     参数类型    |   参数说明   |
+| ----------- | --------------- |----------- |
+| UserID      | int,不可为空  |  用户ID    |
+
+
+- 返回参数
+
+| 返回参数      |     参数类型 |   参数说明    |
+| ----------- | ------------| ----------- |
+| Success     |   Boolean   |  请求成功与否  |
+| Code        |   Int       |  执行结果code |
+| Message     |   String    |  执行结果消息  |
+| Data        |   list      |  返回数据     |
+```
+- 返回示例
+离线、在线
+
+```js
+{
+	{
+    "Success": true,
+    "Code": 0,
+    "Message": "",
+    "Data": [
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 266,
+            "createDate": "2018-04-12T10:13:16.953"
+        },
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 709,
+            "createDate": "2018-04-10T14:32:11.93"
+        },
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 107,
+            "createDate": "2018-04-10T09:38:03.483"
+        },
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 271,
+            "createDate": "2018-04-09T15:00:21.527"
+        },
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 250,
+            "createDate": "2018-03-22T16:01:13.81"
+        },
+        {
+            "page": 0,
+            "content": null,
+            "bookID": 331,
+            "createDate": "2018-03-22T16:00:41.44"
+        }
+    ]
+}
+}
 ```
